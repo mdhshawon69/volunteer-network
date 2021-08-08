@@ -56,7 +56,7 @@ export const ButtonReg = styled(Link)`
   text-transform: capitalize;
   background-color: #3f90fc;
   border: none;
-  border-radius: 6px;
+  border-radius: 4px;
   display: flex;
   justify-content: center;
   align-items: center;

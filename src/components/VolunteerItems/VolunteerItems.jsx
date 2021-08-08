@@ -1,11 +1,16 @@
 import React, { useState } from 'react';
+import { useEffect } from 'react';
 import VolunteerOption from '../VolunteerOption/VolunteerOption';
-import volunteerData from './data';
 import { ItemsMain } from './VolunteerItems.elements';
 
 const VolunteerItems = () => {
-  const [volunteerOptions, setVolunteerOptions] = useState([...volunteerData]);
-  console.log(volunteerData);
+  const [volunteerOptions, setVolunteerOptions] = useState([]);
+
+  useEffect(() => {
+    fetch('http://localhost:3001/getEvent')
+      .then((res) => res.json())
+      .then((data) => setVolunteerOptions(data));
+  }, []);
   return (
     <ItemsMain>
       {volunteerOptions.map((item) => (

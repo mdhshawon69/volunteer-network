@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useContext } from 'react';
 import logo from '../../logos/Group 1329.png';
 import {
   NavBar,
@@ -12,8 +13,11 @@ import {
   ButtonAdmin,
 } from './Navigation.elements';
 import { Container } from '../../GlobalStyles';
+import { UserContext } from '../../App';
+import { Avatar } from '@material-ui/core';
 
 const Navigation = () => {
+  const [loggedUser, setLoggedUser] = useContext(UserContext);
   return (
     <NavBar>
       <Container>
@@ -29,16 +33,27 @@ const Navigation = () => {
               <MenuLink to='/'>dontaion</MenuLink>
             </NavItem>
             <NavItem>
-              <MenuLink to='/'>events</MenuLink>
+              <MenuLink to='/events'>events</MenuLink>
             </NavItem>
             <NavItem>
               <MenuLink to='/'>blog</MenuLink>
             </NavItem>
             <NavItem>
-              <ButtonReg to='/'>register</ButtonReg>
+              <ButtonReg to='/register'>Register</ButtonReg>
             </NavItem>
             <NavItem>
-              <ButtonAdmin to='/admin'>admin</ButtonAdmin>
+              {loggedUser.email === 'mahmudulhaqshaown@gmail.com' ? (
+                <ButtonAdmin to='/admin'>admin</ButtonAdmin>
+              ) : null}
+            </NavItem>
+            <NavItem>
+              {loggedUser.success ? (
+                <Avatar
+                  style={{ margin: '20px 10px 0' }}
+                  alt='Remy Sharp'
+                  src={loggedUser.image}
+                />
+              ) : null}
             </NavItem>
           </NavItems>
         </MenuArea>

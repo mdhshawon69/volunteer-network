@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ItemsMain = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
   width: 75%;

@@ -6,6 +6,8 @@ export const MainArea = styled.div`
   background-position: center;
   background-size: cover;
   margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 10px;
 `;
 
 export const OptionImage = styled.img`

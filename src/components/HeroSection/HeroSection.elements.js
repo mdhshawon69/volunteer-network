@@ -19,6 +19,7 @@ export const Heading = styled.h1`
   text-transform: capitalize;
   font-size: 35px;
   margin-bottom: 30px;
+  text-align: center;
 `;
 
 export const SearchForm = styled.form`
