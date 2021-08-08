@@ -12,7 +12,7 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 import firebaseConfig from '../../FirebaseConfig';
 import { useContext } from 'react';
-import { EventsContext, UserContext } from '../../App';
+import { UserContext } from '../../App';
 
 if (!firebase.apps.length) {
   firebase.initializeApp(firebaseConfig);
@@ -22,25 +22,10 @@ if (!firebase.apps.length) {
 
 const Register = () => {
   const [loggedUser, setLoggedUser] = useContext(UserContext);
-  const [events, setEvents] = useContext(EventsContext);
   const history = useHistory();
   const location = useLocation();
   const provider = new firebase.auth.GoogleAuthProvider();
   let { from } = location.state || { from: { pathname: '/' } };
-
-  if (loggedUser.email) {
-    fetch('https://volunteer-network69.herokuapp.com/addUser', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: { ...loggedUser, events: events },
-    })
-      .then((res) => res.json())
-      .then((data) =>
-        data ? console.log('User added') : console.log('Unable to add User')
-      );
-  }
 
   const handleRegister = () => {
     firebase
