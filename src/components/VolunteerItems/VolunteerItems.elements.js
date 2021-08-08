@@ -14,4 +14,8 @@ export const ItemsMain = styled.div`
     margin: auto;
     margin-top: -100px;
   }
+
+  @media screen and (max-width: 400px) {
+    width: 70%;
+  }
 `;

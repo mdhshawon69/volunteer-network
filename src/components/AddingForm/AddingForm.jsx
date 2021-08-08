@@ -26,7 +26,7 @@ const AddingForm = () => {
   };
 
   const handleSubmit = (e, data) => {
-    fetch('http://localhost:3001/addEvent', {
+    fetch('https://volunteer-network69.herokuapp.com/addEvent', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

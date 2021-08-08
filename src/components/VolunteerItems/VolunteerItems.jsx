@@ -7,7 +7,7 @@ const VolunteerItems = () => {
   const [volunteerOptions, setVolunteerOptions] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/getEvent')
+    fetch('https://volunteer-network69.herokuapp.com/getEvent')
       .then((res) => res.json())
       .then((data) => setVolunteerOptions(data));
   }, []);

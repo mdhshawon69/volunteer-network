@@ -9,17 +9,33 @@ export const FormArea = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+  }
 `;
 
 export const AddForm = styled.form`
   display: flex;
   justify-content: space-around;
   align-items: center;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    margin: auto;
+  }
 `;
 
 export const FormSide = styled.div`
   width: 45%;
   height: 320px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const AddInput = styled.input`
@@ -31,6 +47,11 @@ export const AddInput = styled.input`
   color: #999;
   margin-bottom: 20px;
   margin-top: 10px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    display: block;
+  }
 `;
 
 export const AddTextArea = styled.textarea`
@@ -57,6 +78,13 @@ export const FormButton = styled.input`
   position: absolute;
   top: 75%;
   left: 82.3%;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    position: unset;
+    margin: auto;
+    margin-bottom: 30px;
+  }
 `;
 
 export const FormLabel = styled.label`

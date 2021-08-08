@@ -7,4 +7,10 @@ export const EventsBody = styled.div`
   margin: auto;
   flex-wrap: wrap;
   margin-top: 50px;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    margin: auto;
+    margin-top: 30px;
+  }
 `;

@@ -11,13 +11,13 @@ import {
 } from './Admin.elements';
 import img from '../../logos/Group 1329.png';
 import { Link } from 'react-router-dom';
-import DataGrid from '../DataGrid/DataGrid';
+import DataGrid from '../../components/DataGrid/DataGrid';
 import AddCircleOutlineIcon from '@material-ui/icons/AddCircleOutline';
 import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
 import { useState } from 'react';
-import AddingForm from '../AddingForm/AddingForm';
+import AddingForm from '../../components/AddingForm/AddingForm';
 
-const Admin = () => {
+const Adminpage = () => {
   const [active, setActive] = useState(1);
 
   const stateChange = (menuIndex) => {
@@ -63,4 +63,4 @@ const Admin = () => {
   );
 };
 
-export default Admin;
+export default Adminpage;

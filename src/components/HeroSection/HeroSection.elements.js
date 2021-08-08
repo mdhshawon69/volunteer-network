@@ -13,6 +13,11 @@ export const Main = styled.div`
   background-size: cover;
   z-index: 9999;
   margin-top: -80px;
+
+  @media screen and (max-width: 768px) {
+    margin-right: auto;
+    margin-left: auto;
+  }
 `;
 
 export const Heading = styled.h1`
@@ -28,6 +33,10 @@ export const SearchForm = styled.form`
   justify-content: center;
   align-items: center;
   margin: auto;
+
+  @media screen and (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 export const SearchInput = styled.input`

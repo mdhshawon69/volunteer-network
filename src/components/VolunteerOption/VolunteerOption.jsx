@@ -26,7 +26,7 @@ function VolunteerOption(props) {
   const [events, setEvents] = useContext(EventsContext);
 
   const handleAddEvents = (id) => {
-    fetch(`http://localhost:3001/eventById/${id}`)
+    fetch(`https://volunteer-network69.herokuapp.com/eventById/${id}`)
       .then((res) => res.json())
       .then((data) => setEvents([...events, data]));
   };

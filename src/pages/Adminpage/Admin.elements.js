@@ -23,6 +23,10 @@ export const Heading = styled.div`
 export const MainBody = styled.div`
   display: flex;
   justify-content: flex-start;
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const LeftSideBar = styled.div`
@@ -31,6 +35,11 @@ export const LeftSideBar = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+    padding: 30px;
+  }
 `;
 
 export const SideLink = styled(Link)`
@@ -47,6 +56,10 @@ export const RightSideBar = styled.div`
   width: 80%;
   min-height: 640px;
   background-color: #eee;
+
+  @media screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const GridArea = styled.div`

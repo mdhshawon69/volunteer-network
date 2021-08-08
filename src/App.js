@@ -1,16 +1,15 @@
 /* eslint-disable no-sequences */
 import './App.css';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Navigation from './components/Navigation/Navigation';
 import { GlobalStyle } from './GlobalStyles';
 import Homepage from './pages/Homepage/Homepage';
 import { createContext } from 'react';
 import { useState } from 'react';
-import Register from './components/Register/Register';
-import Admin from './components/Admin/Admin';
 import OnlyForAdmin from './SecureComponent/OnlyForAdmin';
 import SecureComponent from './SecureComponent/SecureComponent';
-import AddedEvents from './components/AddedEvents/AddedEvents';
+import Eventspage from './pages/Eventspage/Eventspage';
+import Registerpage from './pages/Registerpage/Registerpage';
+import Adminpage from './pages/Adminpage/Adminpage';
 
 export const EventsContext = createContext();
 export const UserContext = createContext();
@@ -32,19 +31,16 @@ function App() {
         <Router>
           <Switch>
             <Route exact path='/'>
-              <Navigation />
               <Homepage />
             </Route>
             <Route path='/register'>
-              <Navigation />
-              <Register />
+              <Registerpage />
             </Route>
             <OnlyForAdmin path='/admin'>
-              <Admin />
+              <Adminpage />
             </OnlyForAdmin>
             <SecureComponent path='/events'>
-              <Navigation />
-              <AddedEvents />
+              <Eventspage />
             </SecureComponent>
           </Switch>
         </Router>

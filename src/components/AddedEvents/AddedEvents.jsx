@@ -10,13 +10,13 @@ const AddedEvents = () => {
   const [events, setEvents] = useContext(EventsContext);
   const [loggedUser, setLoggedUser] = useContext(UserContext);
 
-  const userData = {
-    ...loggedUser,
-    events: events,
-  };
-
   const handleConfirm = () => {
-    fetch('http://localhost:3001/addUser', {
+    const userData = {
+      ...loggedUser,
+      events: events,
+    };
+
+    fetch('https://volunteer-network69.herokuapp.com/addUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

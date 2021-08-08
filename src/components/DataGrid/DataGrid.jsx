@@ -22,13 +22,13 @@ export default function DataGrid() {
   const [rows, setRows] = useState([]);
 
   useEffect(() => {
-    fetch('http://localhost:3001/addedUser')
+    fetch('https://volunteer-network69.herokuapp.com/addedUser')
       .then((res) => res.json())
       .then((data) => setRows(data));
   }, []);
 
   const handleDelete = (_id) => {
-    fetch(`http://localhost:3001/removeByEmail/${_id}`, {
+    fetch(`https://volunteer-network69.herokuapp.com/removeByEmail/${_id}`, {
       method: 'DELETE',
     })
       .then((res) => res.json())

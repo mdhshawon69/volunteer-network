@@ -15,6 +15,12 @@ export const EventCard = styled.div`
     rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
   margin-bottom: 50px;
+
+  @media screen and (max-width: 768px) {
+    width: 350px;
+    height: 200px;
+    margin-left: 10px;
+  }
 `;
 
 export const EventImage = styled.img`
@@ -50,4 +56,8 @@ export const CancelButton = styled.button`
   top: 75%;
   left: 75%;
   cursor: pointer;
+
+  @media screen and (max-width: 768px) {
+    left: 68%;
+  }
 `;

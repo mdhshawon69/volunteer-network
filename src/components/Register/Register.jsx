@@ -29,7 +29,7 @@ const Register = () => {
   let { from } = location.state || { from: { pathname: '/' } };
 
   if (loggedUser.email) {
-    fetch('http://localhost:3001/addUser', {
+    fetch('https://volunteer-network69.herokuapp.com/addUser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
