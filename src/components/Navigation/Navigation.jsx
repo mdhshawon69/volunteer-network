@@ -82,7 +82,7 @@ const Navigation = () => {
               <ButtonReg to='/register'>Register</ButtonReg>
             </NavItem>
             <NavItem>
-              {loggedUser.email === 'mahmudulhaqshaown@gmail.com' ? (
+              {loggedUser.email ? (
                 <ButtonAdmin to='/admin'>admin</ButtonAdmin>
               ) : null}
             </NavItem>

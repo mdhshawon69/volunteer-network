@@ -9,7 +9,7 @@ function OnlyForAdmin({ children, ...rest }) {
     <Route
       {...rest}
       render={({ location }) =>
-        loggedUser.email === 'mahmudulhaqshaown@gmail.com' ? (
+        loggedUser.email ? (
           children
         ) : (
           <Redirect
