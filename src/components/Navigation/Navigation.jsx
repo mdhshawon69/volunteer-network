@@ -96,7 +96,7 @@ const Navigation = () => {
               ) : null}
             </NavItem>
           </NavItems>
-          <span onClick={() => setClick(!click)}>
+          <span style={{ transition: '0.5s' }} onClick={() => setClick(!click)}>
             {click ? <MoblileIconClose /> : <MoblileIconOpen />}
           </span>
         </MenuArea>

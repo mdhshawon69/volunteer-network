@@ -23,6 +23,6 @@ export const NoEvents = styled.h2`
 
   @media screen and (max-width: 768px) {
     font-size: 30px;
-    left: 25%;
+    left: 20%;
   }
 `;

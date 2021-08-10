@@ -13,9 +13,13 @@ export const AdminLogo = styled.img`
   height: 60px;
   width: auto;
   margin-left: 20px;
+
+  @media screen and (max-width: 400px) {
+    height: 40px;
+  }
 `;
 
-export const Heading = styled.div`
+export const Heading = styled.h5`
   flex-grow: 1;
   text-align: center;
 `;
