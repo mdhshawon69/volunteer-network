@@ -25,6 +25,11 @@ export const RegisterArea = styled.div`
   align-items: center;
   flex-direction: column;
   position: relative;
+
+  @media screen and (max-width: 400px) {
+    height: 200px;
+    width: 350px;
+  }
 `;
 
 export const RegisterButton = styled.button`
@@ -41,6 +46,10 @@ export const RegisterButton = styled.button`
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   display: flex;
   align-items: center;
+
+  @media screen and (max-width: 400px) {
+    width: 330px;
+  }
 `;
 
 export const RegisterMessage = styled.div`

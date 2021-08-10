@@ -4,7 +4,7 @@ import React from 'react';
 import { useContext } from 'react';
 import { EventsContext, UserContext } from '../../App';
 import Event from '../Event/Event';
-import { EventsBody } from './AddedEvents.elements';
+import { EventsBody, NoEvents } from './AddedEvents.elements';
 
 const AddedEvents = () => {
   const [events, setEvents] = useContext(EventsContext);
@@ -33,7 +33,7 @@ const AddedEvents = () => {
     <Container>
       <EventsBody>
         {events.length === 0 ? (
-          <h2>No Events Added</h2>
+          <NoEvents>No Events Added</NoEvents>
         ) : (
           events.map((event) => <Event key={event.id} data={event} />)
         )}

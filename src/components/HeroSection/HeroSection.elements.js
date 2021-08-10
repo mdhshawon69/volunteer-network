@@ -22,9 +22,13 @@ export const Main = styled.div`
 
 export const Heading = styled.h1`
   text-transform: capitalize;
-  font-size: 35px;
+  font-size: 50px;
   margin-bottom: 30px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    font-size: 35px;
+  }
 `;
 
 export const SearchForm = styled.form`
