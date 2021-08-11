@@ -48,7 +48,7 @@ export const RegisterButton = styled.button`
   align-items: center;
 
   @media screen and (max-width: 400px) {
-    width: 330px;
+    width: 270px;
   }
 `;
 
@@ -65,4 +65,8 @@ export const RegisterMessage = styled.div`
   position: absolute;
   top: 15px;
   color: #fff;
+
+  @media screen and (max-width: 400px) {
+    width: 330px;
+  }
 `;
