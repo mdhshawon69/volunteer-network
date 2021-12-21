@@ -2,20 +2,14 @@ import styled from 'styled-components';
 
 export const ItemsMain = styled.div`
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 75%;
-  margin: auto;
   margin-top: -100px;
 
   @media screen and (max-width: 768px) {
-    width: 55%;
-    margin: auto;
+    width: auto;
+    justify-content: center;
     margin-top: -100px;
-  }
-
-  @media screen and (max-width: 400px) {
-    width: 70%;
   }
 `;
