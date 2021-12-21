@@ -27,6 +27,7 @@ const AddedEvents = () => {
       .then((data) =>
         data ? console.log('User added') : console.log('Unable to add User')
       );
+    setEvents([]);
   };
 
   return (
